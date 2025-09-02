@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Merriweather:wght@400;700&display=swap');
+
+
+$primary: #1E3A8A;
+$secondary: #10B981;
+$info: #3B82F6;
+$light: #F9FAFB;
+$dark: #111827;
+$body-bg: $light;
+$body-color: $dark;
+$font-family-base: 'Poppins', sans-serif;
+$headings-font-family: 'Merriweather', serif;
+
+
+@import "bootstrap/scss/bootstrap";
+
+
+body {
+  background-color: $body-bg;
+  color: $body-color;
+  font-family: $font-family-base;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: $headings-font-family;
+  font-weight: 700;
+  color: $primary;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+
+.btn-rounded {
+  @extend .btn;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &.btn-primary {
+    background-color: $primary;
+    border: none;
+
+    &:hover {
+      background-color: darken($primary, 8%);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $secondary;
+    border: none;
+
+    &:hover {
+      background-color: darken($secondary, 8%);
+    }
+  }
+}
+
+// Tarjetas (cards) personalizadas
+.card-custom {
+  @extend .card;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: none;
+  background: #fff;
+
+  .card-header {
+    background-color: $primary;
+    color: #fff;
+    font-family: $headings-font-family;
+  }
+
+  .card-body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
