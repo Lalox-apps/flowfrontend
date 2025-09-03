@@ -1,0 +1,51 @@
+.app-container {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+  background: var(--primary-dark);
+}
+
+.sidebar .nav-link {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.75rem 1rem;
+  display: block;
+
+  &:hover, &.active {
+    background-color: var(--primary-light);
+    color: #000;
+    font-weight: 600;
+  }
+}
+
+/* Responsive: ocultar sidebar en móviles */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 1050;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+.main-content {
+  flex-grow: 1;
+  background: #f8f9fa;
+}

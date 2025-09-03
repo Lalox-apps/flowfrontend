@@ -1,0 +1,28 @@
+<div class="d-flex">
+  <!-- Sidebar -->
+  <nav class="sidebar bg-white shadow-sm min-vh-100">
+    <h2 class="sidebar-header">Visa App</h2>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/users" routerLinkActive="active">Usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/books" routerLinkActive="active">Libros</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/affirmations" routerLinkActive="active">Afirmaciones</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/meditations" routerLinkActive="active">Meditaciones</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="flex-grow-1 p-4">
+    <router-outlet></router-outlet>
+  </main>
+</div>
